@@ -46,7 +46,7 @@ void loop() {
 /************************* Funções **************************/
 
 void proximaRodada() {
-  randomSeed(analogRead(A0));
+  randomSeed(analogRead(A0))
   int sorteio = random(4);
   sequencia[rodada] = sorteio;
   rodada = rodada + 1;
@@ -57,10 +57,10 @@ void reproduzirSequencia() {
   for (int i = 0; i < rodada; i++) {
     tone(7, tons[sequencia[i]]);
     digitalWrite(leds[sequencia[i]], HIGH);
-    delay(500);
+    delay(900);
     noTone(7);
     digitalWrite(leds[sequencia[i]], LOW);
-    delay(100);
+    delay(300);
   }
 }
 
